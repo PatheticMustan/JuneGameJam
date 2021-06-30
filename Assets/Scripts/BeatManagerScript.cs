@@ -16,7 +16,7 @@ public class BeatManagerScript : MonoBehaviour {
     // each phase is 8 beats long, first the flower sets out 8 beats, then the player copies those 8
     // spaces are ignored
     public Song[] levels = new Song[] {
-        new Song("Test Song", 120, "bxbxbxbx xbxbxbxb xbxbxbbb xxxbxxxb")
+        // new Song("Test Song", 120, "bxbxbxbx xbxbxbxb xbxbxbbb xxxbxxxb", audioClip)
     };
 
     void Start() {
@@ -33,10 +33,12 @@ public struct Song {
     public string songName;
     public int bpm;
     public string beatData;
+    public AudioClip audio;
 
-    public Song(string songName, int bpm, string beatData) {
+    public Song(string songName, int bpm, string beatData, AudioClip audio) {
         this.songName = songName;
         this.bpm = bpm;
         this.beatData = beatData;
+        this.audio = audio;
     }
 }
