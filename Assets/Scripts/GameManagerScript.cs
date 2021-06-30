@@ -10,10 +10,11 @@ public class GameManagerScript : MonoBehaviour {
     }
 
     void Update() {
-
+        if (Input.GetKeyDown(KeyCode.Space)) click();
     }
 
-
+    void click() { 
+    }
 
     void startLevel(int level) {
         score = 0;

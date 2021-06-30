@@ -33,10 +33,12 @@ public struct Song {
     public string songName;
     public int bpm;
     public string beatData;
+    public AudioClip audio;
 
-    public Song(string songName, int bpm, string beatData) {
+    public Song(string songName, int bpm, string beatData, AudioClip audio) {
         this.songName = songName;
         this.bpm = bpm;
         this.beatData = beatData;
+        this.audio = audio;
     }
 }
