@@ -689,7 +689,8 @@ MonoBehaviour:
   levels:
   - songName: Test Song
     bpm: 120
-    beatData: bxbxbxbx xbxbxbxb xbxbxbbb xxxbxxxb
+    beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
+      xbgbxgpg xgxgpgxg xbbbbbbb
     audio: {fileID: 8300000, guid: 18d42d30b95e3884894cdb1e2b640239, type: 3}
 --- !u!82 &470784742
 AudioSource:
@@ -1042,7 +1043,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1148968529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 4.7708507, y: 1.776107, z: 1.776107}
   m_Children: []
   m_Father: {fileID: 1689407398}
@@ -1122,7 +1123,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432751252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: -1, z: 0}
+  m_LocalPosition: {x: -7, y: 0, z: 0}
   m_LocalScale: {x: 2.271, y: 2.271, z: 2.271}
   m_Children: []
   m_Father: {fileID: 2141223183}
@@ -1157,7 +1158,6 @@ Transform:
   m_Children:
   - {fileID: 68433969}
   - {fileID: 1148968531}
-  - {fileID: 2067632594}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1186,7 +1186,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1765211890}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: -0.5, z: 0}
+  m_LocalPosition: {x: 7, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2141223183}
@@ -1266,10 +1266,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2067632593}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5.2351027, y: 2.8, z: -1}
+  m_LocalPosition: {x: -6, y: 0, z: -1}
   m_LocalScale: {x: 0.5, y: 5, z: 1}
   m_Children: []
-  m_Father: {fileID: 1689407398}
+  m_Father: {fileID: 2141223183}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2067632595
@@ -1350,6 +1350,7 @@ Transform:
   m_Children:
   - {fileID: 1432751254}
   - {fileID: 1765211891}
+  - {fileID: 2067632594}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

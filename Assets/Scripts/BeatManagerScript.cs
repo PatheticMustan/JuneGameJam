@@ -16,7 +16,7 @@ public class BeatManagerScript : MonoBehaviour {
     // each phase is 8 beats long, first the flower sets out 8 beats, then the player copies those 8
     // spaces are ignored
     public Song[] levels = new Song[] {
-        new Song("Test Song", 120, "xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg xbgbxgpg xgxgpgxg xbbbbbbb")
+        //new Song("Test Song", 120, "xxxbxxxb", audioclip)
     };
 
     void Start() {
