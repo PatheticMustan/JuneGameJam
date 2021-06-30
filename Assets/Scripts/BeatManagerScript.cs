@@ -2,17 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BeatManagerScript : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+public class BeatManagerScript : MonoBehaviour {
+
+    // b - normal beats
+    // x - rest, empty space
+    // g - ghost beats
+    // s - shift beats
+    string[] levels = new string[] {
+        "bbbb xxxx bxbx xxxx xbxb xxxx"
+    };
+
+    void Start() {
+
     }
 
-    // Update is called once per frame
-    void Update()
-    {
+    void Update() {
         
     }
 }
