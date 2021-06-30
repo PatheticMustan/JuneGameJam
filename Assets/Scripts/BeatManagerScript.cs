@@ -24,7 +24,14 @@ public class BeatManagerScript : MonoBehaviour {
     }
 
     void FixedUpdate() {
-        
+
+    }
+
+    public void startLevel(int level, int beat) {
+        beat = 0;
+        GetComponent<AudioSource>().clip = levels[level].audio;
+        GetComponent<AudioSource>().Play();
+
     }
 }
 
