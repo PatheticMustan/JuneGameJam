@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BeatScript : MonoBehaviour {
+
+
     void Start() {
 
     }
@@ -10,4 +12,6 @@ public class BeatScript : MonoBehaviour {
     void Update() {
 
     }
+
+    public void setupBeat(int beat, BeatTypes type) { }
 }

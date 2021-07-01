@@ -1,9 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Text.RegularExpressions;
 
 public class BeatManagerScript : MonoBehaviour {
     public int currentBeat;
+    public float time;
+
+    public bool playing;
+
+    public float beatLength;
+
+    public BeatTypes[] beatData;
 
     /** Beat Notes
      * x - empty space
@@ -24,7 +32,10 @@ public class BeatManagerScript : MonoBehaviour {
     }
 
     void FixedUpdate() {
-
+        if (playing) {
+            time += Time.deltaTime;
+            currentBeat = (int)(time * beatLength);
+        }
     }
 
     public void startLevel(int level, int beat) {
@@ -32,6 +43,35 @@ public class BeatManagerScript : MonoBehaviour {
         GetComponent<AudioSource>().clip = levels[level].audio;
         GetComponent<AudioSource>().Play();
 
+        string cleanedBeats = Regex.Replace(levels[level].beatData.ToLower(), @"[^xbpdg]", "");
+
+        for (int i = 0; i < cleanedBeats.Length; i++) {
+            switch (cleanedBeats[i]) {
+                case 'x':
+                    beatData[i] = BeatTypes.Rest;
+                    break;
+                case 'b':
+                    beatData[i] = BeatTypes.Normal;
+                    break;
+                case 'p':
+                    beatData[i] = BeatTypes.Poison;
+                    break;
+                case 'd':
+                    beatData[i] = BeatTypes.Double;
+                    break;
+                case 'g':
+                    beatData[i] = BeatTypes.Ghost;
+                    break;
+                default:
+                    Debug.LogError("Invalid note! AHHHHH!");
+                    break;
+            }
+        }
+
+        beatLength = (float)(levels[level].bpm) / 60;
+        time = 0;
+
+        playing = true;
     }
 }
 
@@ -48,4 +88,13 @@ public struct Song {
         this.beatData = beatData;
         this.audio = audio;
     }
+}
+
+[System.Serializable]
+public enum BeatTypes { 
+    Rest,
+    Normal,
+    Poison,
+    Double,
+    Ghost
 }
