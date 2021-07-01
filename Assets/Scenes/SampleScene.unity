@@ -450,11 +450,11 @@ MonoBehaviour:
       _vertOscXStr: 0
       _vertOscXFrc: 0
       _vertOscXSpd: 0
-      _horOscYStr: 0
-      _horOscYFrc: 0
-      _horOscYSpd: 0
-      _vertOscYStr: 30
-      _vertOscYFrc: 30
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 12
+      _vertOscYFrc: 32
       _vertOscYSpd: 1
       _scrollOffset: {x: 0, y: 0}
     _layerOneInter:
@@ -506,6 +506,432 @@ MonoBehaviour:
       _scrollOffset: {x: 0, y: 0}
     _colorArrayTwo: []
     _timerTickTwo: 0
+  - _name: Tree2
+    _layerOneTex: {fileID: 21300000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowInterOscLO: 0
+    _layerOne:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _layerOneInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayOne: []
+    _timerTickOne: 0
+    _layerTwoTex: {fileID: 0}
+    _allowLayering: 0
+    _allowInterOscLT: 0
+    _layerTwo:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _layerTwoInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayTwo: []
+    _timerTickTwo: 0
+  - _name: Tree3
+    _layerOneTex: {fileID: 21300000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowInterOscLO: 0
+    _layerOne:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 30
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _layerOneInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayOne:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickOne: 0.4167
+    _layerTwoTex: {fileID: 0}
+    _allowLayering: 0
+    _allowInterOscLT: 0
+    _layerTwo:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _layerTwoInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayTwo: []
+    _timerTickTwo: 0
+  - _name: Tree4
+    _layerOneTex: {fileID: 21300000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowInterOscLO: 0
+    _layerOne:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _layerOneInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _colorArrayOne:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickOne: 0.4167
+    _layerTwoTex: {fileID: 2800000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowLayering: 1
+    _allowInterOscLT: 0
+    _layerTwo:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 50
+      _vertOscXFrc: 0.1
+      _vertOscXSpd: 1
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _layerTwoInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayTwo: []
+    _timerTickTwo: 0
+  - _name: Tree5
+    _layerOneTex: {fileID: 21300000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowInterOscLO: 0
+    _layerOne:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _layerOneInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _colorArrayOne:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickOne: 0.4167
+    _layerTwoTex: {fileID: 2800000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowLayering: 1
+    _allowInterOscLT: 0
+    _layerTwo:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 50
+      _vertOscXFrc: 0.1
+      _vertOscXSpd: 1
+      _horOscYStr: 10
+      _horOscYFrc: 32
+      _horOscYSpd: 1
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 5, y: 0}
+    _layerTwoInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayTwo:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickTwo: 0.4167
+  - _name: Tree6
+    _layerOneTex: {fileID: 21300000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowInterOscLO: 0
+    _layerOne:
+      _horOscXStr: 1
+      _horOscXFrc: 1
+      _horOscXSpd: 1
+      _vertOscXStr: 1
+      _vertOscXFrc: 1
+      _vertOscXSpd: 1
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: -2, y: 3}
+    _layerOneInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 50
+      _horOscYFrc: 0.1
+      _horOscYSpd: 1
+      _vertOscYStr: 5
+      _vertOscYFrc: 32
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 0, y: 3}
+    _colorArrayOne:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickOne: 0.4167
+    _layerTwoTex: {fileID: 2800000, guid: c752f17ebce63e54e85b00320688929b, type: 3}
+    _allowLayering: 1
+    _allowInterOscLT: 0
+    _layerTwo:
+      _horOscXStr: 1
+      _horOscXFrc: 1
+      _horOscXSpd: 1
+      _vertOscXStr: 50
+      _vertOscXFrc: 0.1
+      _vertOscXSpd: 1
+      _horOscYStr: 10
+      _horOscYFrc: 32
+      _horOscYSpd: 1
+      _vertOscYStr: 1
+      _vertOscYFrc: 1
+      _vertOscYSpd: 1
+      _scrollOffset: {x: 5, y: -3}
+    _layerTwoInter:
+      _horOscXStr: 0
+      _horOscXFrc: 0
+      _horOscXSpd: 0
+      _vertOscXStr: 0
+      _vertOscXFrc: 0
+      _vertOscXSpd: 0
+      _horOscYStr: 0
+      _horOscYFrc: 0
+      _horOscYSpd: 0
+      _vertOscYStr: 0
+      _vertOscYFrc: 0
+      _vertOscYSpd: 0
+      _scrollOffset: {x: 0, y: 0}
+    _colorArrayTwo:
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281714506
+    - serializedVersion: 2
+      rgba: 4281978959
+    - serializedVersion: 2
+      rgba: 4281909068
+    - serializedVersion: 2
+      rgba: 4281510211
+    - serializedVersion: 2
+      rgba: 4281112124
+    - serializedVersion: 2
+      rgba: 4281510724
+    - serializedVersion: 2
+      rgba: 4281510724
+    _timerTickTwo: 0.4167
 --- !u!114 &344180118
 MonoBehaviour:
   m_ObjectHideFlags: 0
