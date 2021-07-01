@@ -1223,7 +1223,7 @@ MonoBehaviour:
     type: 3}
   levels:
   - songName: Test Song
-    bpm: 30
+    bpm: 120
     beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
       xbgbxgpg xgxgpgxg xbbbbbbb
     audio: {fileID: 8300000, guid: 18d42d30b95e3884894cdb1e2b640239, type: 3}
@@ -2103,7 +2103,7 @@ GameObject:
   - component: {fileID: 1965415340}
   - component: {fileID: 1965415339}
   m_Layer: 0
-  m_Name: TheGiantEnemyFlower_0
+  m_Name: TheGiantEnemyFlower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

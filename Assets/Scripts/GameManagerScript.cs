@@ -19,7 +19,7 @@ public class GameManagerScript : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.K)) startLevel(0);
 
-        Debug.Log(1 - (bms.time % (1 / bms.beatsPerSecond)));
+        //Debug.Log(1 - (bms.time % (1 / bms.beatsPerSecond)));
     }
 
     void click() {
@@ -28,11 +28,11 @@ public class GameManagerScript : MonoBehaviour {
         if (bms.playing) {
             // how good a hit is (lower is better)
             // ranges from -1 to 1
-            float clickTiming = 1 - (bms.time % (1 / bms.beatsPerSecond));
+            float clickTiming = 1 - (bms.time % (1f / bms.beatsPerSecond)) * bms.beatsPerSecond;
             // ranges from 0 to 1
             float cta = Mathf.Abs(clickTiming);
 
-            Debug.Log(clickTiming);
+            Debug.Log(clickTiming + " " + bms.time + " " + bms.beatsPerSecond + " " + (1f / bms.beatsPerSecond));
 
             /** Beat Timings
              * 1 to 0.5:        too early
