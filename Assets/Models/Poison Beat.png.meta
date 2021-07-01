@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 56314e3d57b2eb24eb2a84a776324757
+guid: 51b5e35a8e9fd7a4ba9d2baeeb35b9ad
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5783001041957326358
-    second: NormalBeat_0
+      213: 2735533690264012067
+    second: Poison Beat_0
   - first:
-      213: 7050821074638922898
-    second: NormalBeat_1
+      213: 253707881808278962
+    second: Poison Beat_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NormalBeat_0
+      name: Poison Beat_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722222e0ad32dfb49867a7e52d1f616b
-      internalID: 5783001041957326358
+      spriteID: 0cc78d723016e6b4fb6cc5c4cdc7c5b0
+      internalID: 2735533690264012067
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NormalBeat_1
+      name: Poison Beat_1
       rect:
         serializedVersion: 2
         x: 0
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ab9a793d6a364340aa2545d51e5e4a7
-      internalID: 7050821074638922898
+      spriteID: fc82c6c962eacb2429ceefd03b8c05e6
+      internalID: 253707881808278962
       vertices: []
       indices: 
       edges: []

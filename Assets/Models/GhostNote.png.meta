@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 56314e3d57b2eb24eb2a84a776324757
+guid: 47915b05336d77246bc58c99281ab5b8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5783001041957326358
-    second: NormalBeat_0
+      213: -7055312389297405040
+    second: GhostNote_0
   - first:
-      213: 7050821074638922898
-    second: NormalBeat_1
+      213: 7348849447618113046
+    second: GhostNote_1
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -104,7 +104,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: NormalBeat_0
+      name: GhostNote_0
       rect:
         serializedVersion: 2
         x: 0
@@ -118,14 +118,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 722222e0ad32dfb49867a7e52d1f616b
-      internalID: 5783001041957326358
+      spriteID: fca19a7e59d71b64bb62bb22bcb6595d
+      internalID: -7055312389297405040
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: NormalBeat_1
+      name: GhostNote_1
       rect:
         serializedVersion: 2
         x: 0
@@ -139,8 +139,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2ab9a793d6a364340aa2545d51e5e4a7
-      internalID: 7050821074638922898
+      spriteID: 34aa633b807496245ae9fe88eec2d54b
+      internalID: 7348849447618113046
       vertices: []
       indices: 
       edges: []
