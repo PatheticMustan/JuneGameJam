@@ -9,9 +9,16 @@ public class BeatManagerScript : MonoBehaviour {
 
     public bool playing;
 
-    public float beatLength;
+    private float beatLength;
 
     public BeatTypes[] beatData;
+
+    public GameObject musicCounter;
+    public GameObject beatContainer;
+
+    public GameObject beatPrefab;
+
+    private int lastUpdatedBeat;
 
     /** Beat Notes
      * x - empty space
@@ -28,13 +35,27 @@ public class BeatManagerScript : MonoBehaviour {
     };
 
     void Start() {
-
+        
     }
 
     void FixedUpdate() {
         if (playing) {
             time += Time.deltaTime;
             currentBeat = (int)(time * beatLength);
+            Vector3 start = new Vector3(-6.3f, 0, 0);
+            Vector3 end = new Vector3(6.3f, 0, 0);
+            float speed = 1.59f; // 1.59 is the length of one beat cell, reset every 8 beats
+
+            if (Equals(musicCounter.transform.position, end)) {
+                musicCounter.transform.position = start;
+            }
+
+            musicCounter.transform.position = Vector3.MoveTowards(
+                musicCounter.transform.position,
+                end,
+                speed*Time.deltaTime
+            );
+
         }
     }
 
@@ -44,6 +65,8 @@ public class BeatManagerScript : MonoBehaviour {
         GetComponent<AudioSource>().Play();
 
         string cleanedBeats = Regex.Replace(levels[level].beatData.ToLower(), @"[^xbpdg]", "");
+
+        beatData = new BeatTypes[cleanedBeats.Length];
 
         for (int i = 0; i < cleanedBeats.Length; i++) {
             switch (cleanedBeats[i]) {

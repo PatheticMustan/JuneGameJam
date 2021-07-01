@@ -22,7 +22,7 @@ public class GameManagerScript : MonoBehaviour {
 
     void click() {
         GetComponent<AudioSource>().Play();
-        bms.click();
+        
     }
 
     void startLevel(int level) {
