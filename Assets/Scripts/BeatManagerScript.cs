@@ -9,7 +9,7 @@ public class BeatManagerScript : MonoBehaviour {
 
     public bool playing;
 
-    private float beatLength;
+    public float beatsPerSecond;
 
     public BeatTypes[] beatData;
 
@@ -41,7 +41,7 @@ public class BeatManagerScript : MonoBehaviour {
     void FixedUpdate() {
         if (playing) {
             time += Time.deltaTime;
-            currentBeat = (int)(time * beatLength);
+            currentBeat = (int)(time * beatsPerSecond);
             Vector3 start = new Vector3(-6.3f, 0, 0);
             Vector3 end = new Vector3(6.3f, 0, 0);
             float speed = 1.59f; // 1.59 is the length of one beat cell, reset every 8 beats
@@ -53,7 +53,7 @@ public class BeatManagerScript : MonoBehaviour {
             musicCounter.transform.position = Vector3.MoveTowards(
                 musicCounter.transform.position,
                 end,
-                speed*Time.deltaTime*beatLength
+                speed*Time.deltaTime* beatsPerSecond
             );
 
         }
@@ -91,8 +91,8 @@ public class BeatManagerScript : MonoBehaviour {
             }
         }
 
-        // the amount of time one beat takes
-        beatLength = (float)(levels[level].bpm) / 60;
+        // the number of beats in one second
+        beatsPerSecond = (float)(levels[level].bpm) / 60;
         time = 0;
 
         playing = true;

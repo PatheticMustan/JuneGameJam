@@ -22,7 +22,9 @@ public class GameManagerScript : MonoBehaviour {
 
     void click() {
         GetComponent<AudioSource>().Play();
-        
+
+        Debug.Log(bms.time % (1/bms.beatsPerSecond));
+        //bms.currentBeat;
     }
 
     void startLevel(int level) {

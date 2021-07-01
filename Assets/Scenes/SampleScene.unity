@@ -1114,6 +1114,7 @@ MonoBehaviour:
   currentBeat: 0
   time: 0
   playing: 0
+  beatsPerSecond: 0
   beatData: 
   musicCounter: {fileID: 2067632593}
   beatContainer: {fileID: 1337266088}
@@ -1121,7 +1122,7 @@ MonoBehaviour:
     type: 3}
   levels:
   - songName: Test Song
-    bpm: 120
+    bpm: 30
     beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
       xbgbxgpg xgxgpgxg xbbbbbbb
     audio: {fileID: 8300000, guid: 18d42d30b95e3884894cdb1e2b640239, type: 3}
