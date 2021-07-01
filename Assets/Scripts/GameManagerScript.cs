@@ -32,7 +32,7 @@ public class GameManagerScript : MonoBehaviour {
             // ranges from 0 to 1
             float cta = Mathf.Abs(clickTiming);
 
-            Debug.Log(clickTiming + " " + bms.time + " " + bms.beatsPerSecond + " " + (1f / bms.beatsPerSecond));
+            //Debug.Log(clickTiming + " " + bms.time + " " + bms.beatsPerSecond + " " + (1f / bms.beatsPerSecond));
 
             /** Beat Timings
              * 1 to 0.5:        too early
