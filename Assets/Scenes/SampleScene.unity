@@ -1223,10 +1223,10 @@ MonoBehaviour:
     type: 3}
   levels:
   - songName: Test Song
-    bpm: 120
+    bpm: 144
     beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
       xbgbxgpg xgxgpgxg xbbbbbbb
-    audio: {fileID: 8300000, guid: 18d42d30b95e3884894cdb1e2b640239, type: 3}
+    audio: {fileID: 8300000, guid: 0d082d30e5c8210429fba4b2e01351c6, type: 3}
 --- !u!82 &470784742
 AudioSource:
   m_ObjectHideFlags: 0
