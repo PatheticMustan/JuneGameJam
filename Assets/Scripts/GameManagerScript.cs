@@ -32,27 +32,30 @@ public class GameManagerScript : MonoBehaviour {
             // ranges from 0 to 1
             float cta = Mathf.Abs(clickTiming);
 
-            //Debug.Log(clickTiming + " " + bms.time + " " + bms.beatsPerSecond + " " + (1f / bms.beatsPerSecond));
+            Debug.Log(clickTiming + " " + bms.time + " " + bms.beatsPerSecond + " " + (1f / bms.beatsPerSecond));
 
             /** Beat Timings
-             * 1 to 0.5:        too early
-             * 0.5 to 0.25:     good
-             * 0.25 to -0.25:   perfect
-             * -0.25 to -0.5:   good
-             * -0.5 to -1:      too late
+             * 0.5 to 0.8:   too early
+             * 0.8 to 0.9:   good
+             * 0.9 to 0.1:   perfect
+             * 0.1 to 0.2:   good
+             * 0.2 to 0.5:   too late
              * no click at all: miss
              **/
 
             // I was trying to use a switch case but apparently those only accept actual values, not just conditions.
-            if (clickTiming >= 0.5) Debug.Log("Early!");
-            else if (clickTiming >= 0.25) Debug.Log("Good.");
-            else if (clickTiming >= -0.25) Debug.Log("PERFECT!!!!");
-            else if (clickTiming >= -0.5) Debug.Log("Good.");
-            else if (clickTiming >= -1) Debug.Log("Late!");
-            else Debug.Log("How??!?!?! This is not supposed to happen.");
+            if (clickTiming >= 0.9) Debug.Log("PERFECT!!!!");
+            else if (clickTiming >= 0.75) Debug.Log("Good.");
+            else if (clickTiming >= 0.5) Debug.Log("Late!");
+            else if (clickTiming >= 0.25) Debug.Log("Early!");
+            else if (clickTiming >= 0.1) Debug.Log("Good.");
+            else Debug.Log("PERFECT!!!!"); 
+            //else Debug.Log("How??!?!?! This is not supposed to happen.");
         } else {
             Debug.Log("Not playing, fool!");
         }
+
+        //Debug.Break();
     }
 
     void startLevel(int level) {
