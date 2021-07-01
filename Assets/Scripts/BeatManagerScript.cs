@@ -53,7 +53,7 @@ public class BeatManagerScript : MonoBehaviour {
             musicCounter.transform.position = Vector3.MoveTowards(
                 musicCounter.transform.position,
                 end,
-                speed*Time.deltaTime
+                speed*Time.deltaTime*beatLength
             );
 
         }
@@ -91,6 +91,7 @@ public class BeatManagerScript : MonoBehaviour {
             }
         }
 
+        // the amount of time one beat takes
         beatLength = (float)(levels[level].bpm) / 60;
         time = 0;
 
