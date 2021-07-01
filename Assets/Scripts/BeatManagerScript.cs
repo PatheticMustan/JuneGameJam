@@ -56,7 +56,18 @@ public class BeatManagerScript : MonoBehaviour {
                 speed*Time.deltaTime* beatsPerSecond
             );*/
 
-            player.transform.position = new Vector3(-6.3f + (1.6f * (currentBeat%12)), 0, 0);
+            float xVal = -6.3f + (1.6f * (currentBeat % 12));
+
+            if (currentBeat % 12 > 7)
+            {
+                if (currentBeat % 12 > 9)
+                    xVal = -6.3f;
+                else
+                    xVal = 6.3f;
+            }
+
+
+            player.transform.position = new Vector3(xVal, 0, 0);
         }
     }
 
