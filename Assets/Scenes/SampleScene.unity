@@ -1217,7 +1217,7 @@ MonoBehaviour:
   playing: 0
   beatsPerSecond: 2
   beatData: 
-  musicCounter: {fileID: 2067632593}
+  player: {fileID: 1432751252}
   beatContainer: {fileID: 1337266088}
   beatPrefab: {fileID: 4724835035234509358, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
     type: 3}
@@ -1812,7 +1812,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1432751253
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1851,7 +1851,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f14958bbcf1cd204495575b1b4bc1a57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d06f8befa83ceef4f84b89b8e7fd5651, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1870,8 +1870,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1432751252}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7, y: 0, z: 0}
-  m_LocalScale: {x: 2.271, y: 2.271, z: 2.271}
+  m_LocalPosition: {x: -6.3, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 2141223183}
   m_RootOrder: 0
@@ -2214,7 +2214,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2067632594
 Transform:
   m_ObjectHideFlags: 0
