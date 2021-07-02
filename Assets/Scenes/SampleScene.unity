@@ -6085,6 +6085,10 @@ MonoBehaviour:
   musicCounter: {fileID: 2067632593}
   beatPrefab: {fileID: 4724835035234509358, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
     type: 3}
+  slashPS: {fileID: 1780202621}
+  normalBeatPS: {fileID: 591554330}
+  poisonBeatPS: {fileID: 245152532}
+  ghostBeatPS: {fileID: 824368783}
   levels:
   - songName: Test Song
     bpm: 144
@@ -45459,7 +45463,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2067632594
 Transform:
   m_ObjectHideFlags: 0

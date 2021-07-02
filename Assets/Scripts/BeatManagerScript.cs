@@ -22,6 +22,11 @@ public class BeatManagerScript : MonoBehaviour {
     private int lastUpdatedBeat;
     private GameObject[] beats;
 
+    public ParticleSystem slashPS;
+    public ParticleSystem normalBeatPS;
+    public ParticleSystem poisonBeatPS;
+    public ParticleSystem ghostBeatPS;
+
     /** Beat Notes
      * x - empty space
      * b - normal beats
@@ -176,6 +181,43 @@ public class BeatManagerScript : MonoBehaviour {
 
         playing = true;
     }
+
+    public void ParticleEffect(BeatTypes type, Vector3 pos)
+    {
+        slashPS.transform.position = pos;
+        slashPS.Play();
+
+
+        switch (type)
+        {
+            case BeatTypes.Rest:
+                break;
+
+            case BeatTypes.Normal:
+                normalBeatPS.transform.position = pos;
+                normalBeatPS.Play();
+                break;
+
+            case BeatTypes.Poison:
+                poisonBeatPS.transform.position = pos;
+                poisonBeatPS.Play();
+                break;
+
+            case BeatTypes.Double:
+                // GetComponent<Animator>().runtimeAnimatorController = doubleBeat;
+                break;
+
+            case BeatTypes.Ghost:
+                ghostBeatPS.transform.position = pos;
+                ghostBeatPS.Play();
+                break;
+
+            default:
+                Debug.Log("This beat hasn't been implemented yet!");
+                break;
+        }
+    }
+
 }
 
 [System.Serializable]

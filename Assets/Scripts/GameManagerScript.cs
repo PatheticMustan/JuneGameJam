@@ -55,7 +55,7 @@ public class GameManagerScript : MonoBehaviour {
             else if (clickTiming >= 0.5) scoreboard.sprite = lateSprite;
             else if (clickTiming >= 0.25) scoreboard.sprite = earlySprite;
             else if (clickTiming >= 0.1) scoreboard.sprite = goodSprite;
-            else Debug.Log("PERFECT!!!!"); 
+            else scoreboard.sprite = perfectSprite; 
             //else Debug.Log("How??!?!?! This is not supposed to happen.");
         } else {
             Debug.Log("Not playing, fool!");

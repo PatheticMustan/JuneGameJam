@@ -14,6 +14,9 @@ public class BeatScript : MonoBehaviour {
     public int beat;
     public BeatTypes type;
 
+    
+
+
     void Start() {
         //setupBeat(0, BeatTypes.Poison);
         bms = GameObject.FindGameObjectsWithTag("BeatManager")[0].GetComponent<BeatManagerScript>();
@@ -73,12 +76,18 @@ public class BeatScript : MonoBehaviour {
     }
 
     public void click() {
+
+        //Debug.Log(type);
+        if (type != BeatTypes.Rest)
+            bms.ParticleEffect(type, transform.position);
+
         switch (type) {
             case BeatTypes.Rest:
                 break;
 
             case BeatTypes.Normal:
                 gameObject.SetActive(false);
+
                 break;
 
             case BeatTypes.Poison:
