@@ -59,7 +59,8 @@ public class BeatManagerScript : MonoBehaviour {
                 if (lastUpdatedBeat != currentBeat) {
                     lastUpdatedBeat = currentBeat;
 
-                    
+                    // find the current line, we're either on beat 1 (0), or beat 10 (9)
+                    int line = Mathf.CeilToInt((float)currentBeat / 12);
 
                     for (int i = 0; i < 8; i++) {
                         if (currentBeat != 0) {
@@ -67,12 +68,11 @@ public class BeatManagerScript : MonoBehaviour {
                         }
                         beats[i] = Instantiate(beatPrefab);
 
-                        // no, you can't just replace the last part with (currentBeat/3).
-                        // each song line has 8 beats, but each line has a 4 beat buffer afterwards. Current beat is %12, but we need the real beat index,
-                        // so we do some wizard stuff to get it. I swear we've thought it out, we're not just hackjobs!
-                        int cbi = currentBeat + i;
-                        int realBeatIndex = cbi - (4 * (cbi / 12));
+                        
+                        int realBeatIndex = (line * 8) + i;
                         BeatTypes currentBeatType;
+
+                        Debug.Log(realBeatIndex);
 
                         
 
