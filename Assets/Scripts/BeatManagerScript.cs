@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Text.RegularExpressions;
+using UnityEngine.SceneManagement;
 
 public class BeatManagerScript : MonoBehaviour {
     public int currentBeat;
@@ -139,6 +140,8 @@ public class BeatManagerScript : MonoBehaviour {
                     for (int i = 0; i < 8; i++) {
                         Destroy(beats[i]);
                     }
+
+                    SceneManager.LoadScene("Win");
                 }
             }
         }

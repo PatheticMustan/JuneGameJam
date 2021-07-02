@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour {
     public int hp;
@@ -24,7 +25,7 @@ public class Player : MonoBehaviour {
         hpBar.ChangeHP(damage);
 
         if (hp <= 0) {
-            
+            SceneManager.LoadScene("Loss");
             return false;
         }
 
