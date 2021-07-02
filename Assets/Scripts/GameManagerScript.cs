@@ -61,6 +61,8 @@ public class GameManagerScript : MonoBehaviour {
             Debug.Log("Not playing, fool!");
         }
 
+        bms.click();
+
         //Debug.Break();
     }
 

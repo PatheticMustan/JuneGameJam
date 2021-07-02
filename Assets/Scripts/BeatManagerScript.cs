@@ -101,6 +101,12 @@ public class BeatManagerScript : MonoBehaviour {
         }
     }
 
+    public void click() {
+        // beats 2-9 (1-8)
+        int cb = currentBeat % 12;
+        if (cb <= 8 && cb != 0) beats[cb-1].GetComponent<BeatScript>().click();
+    }
+
     public void startLevel(int level, int beat) {
         beat = 0;
         lastUpdatedBeat = -1;
@@ -158,7 +164,7 @@ public struct Song {
 }
 
 [System.Serializable]
-public enum BeatTypes { 
+public enum BeatTypes {
     Rest,
     Normal,
     Poison,
