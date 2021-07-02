@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4724835035234509359}
   - component: {fileID: 4724835035234509357}
   - component: {fileID: 4724835035234509356}
+  - component: {fileID: 5247914891047350680}
   m_Layer: 0
   m_Name: Beat
   m_TagString: Untagged
@@ -27,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 4724835035234509358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -93,3 +94,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64951b78cc0bdd24098d3a57def07b60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  normalBeat: {fileID: 9100000, guid: 1bb1baa5dca61384980211a8872b8430, type: 2}
+  poisonBeat: {fileID: 9100000, guid: 654b2bc72c7d0af41940bd971c9d3da8, type: 2}
+  ghostBeat: {fileID: 9100000, guid: f324e5930cc935c4cb78542b7eb90f9b, type: 2}
+--- !u!95 &5247914891047350680
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4724835035234509358}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bb1baa5dca61384980211a8872b8430, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
