@@ -15,6 +15,7 @@ public class BeatManagerScript : MonoBehaviour {
 
     public GameObject player;
     public GameObject beatContainer;
+    public GameObject musicCounter;
 
     public GameObject beatPrefab;
 
@@ -43,19 +44,6 @@ public class BeatManagerScript : MonoBehaviour {
         if (playing) {
             time += Time.deltaTime;
             currentBeat = (int)(time * beatsPerSecond);
-            Vector3 start = new Vector3(-6.3f, 0, 0);
-            Vector3 end = new Vector3(6.3f, 0, 0);
-            float speed = 1.59f; // 1.59 is the length of one beat cell, reset every 8 beats
-
-            //if (Equals(player.transform.position, end)) {
-            //musicCounter.transform.position = start;
-            //}
-
-            /*musicCounter.transform.position = Vector3.MoveTowards(
-                musicCounter.transform.position,
-                end,
-                speed*Time.deltaTime* beatsPerSecond
-            );*/
 
             float xVal = -6.3f + (1.6f * (currentBeat % 12));
             if (currentBeat % 12 > 7) {
@@ -63,6 +51,8 @@ public class BeatManagerScript : MonoBehaviour {
                 else xVal = 6.3f;
             }
             player.transform.position = new Vector3(xVal, 0, 0);
+
+            musicCounter.transform.position = player.transform.position + new Vector3(-0.8f, 0, 0);
 
             // on the first beat of the song, or the 10th beat of every 12 beats.
             if (currentBeat == 0 || currentBeat % 12 == 9) {
