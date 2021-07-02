@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.Animations;
 
 public class BeatScript : MonoBehaviour {
-    public AnimatorController normalBeat;
-    public AnimatorController poisonBeat;
-    public AnimatorController ghostBeat;
+    public RuntimeAnimatorController normalBeat;
+    public RuntimeAnimatorController poisonBeat;
+    public RuntimeAnimatorController ghostBeat;
     // public AnimatorController doubleBeat;
 
     public BeatManagerScript bms;
