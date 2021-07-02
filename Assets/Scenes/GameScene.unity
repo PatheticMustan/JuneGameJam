@@ -5398,6 +5398,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: caa1d1c866b0208478d1eb3a7a07ba67, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bms: {fileID: 470784741}
+  flag: 0
   ebMaterial: {fileID: 2100000, guid: af3f608045166334e8262c0d4686c363, type: 2}
   backgroundDisplay: {fileID: 344180118}
   bgID: 0

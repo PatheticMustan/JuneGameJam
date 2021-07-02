@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class BackgroundManager : MonoBehaviour
 {
+    public BeatManagerScript bms;
+    public bool flag;
+
     [Header("Material and Projector")]
     [SerializeField]
     private Material ebMaterial;
@@ -54,6 +57,45 @@ public class BackgroundManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        if (bms.currentBeat == 20 && flag)
+        {
+            bgID = 1;
+            update = true;
+            flag = false;
+        }
+        else if (bms.currentBeat == 44 && flag)
+        {
+            bgID = 2;
+            update = true;
+            flag = false;
+        }
+        else if (bms.currentBeat == 68 && flag)
+        {
+            bgID = 3;
+            update = true;
+            flag = false;
+        }
+        else if (bms.currentBeat == 92 && flag)
+        {
+            bgID = 4;
+            update = true;
+            flag = false;
+        }
+        else if (bms.currentBeat == 116 && flag)
+        {
+            bgID = 5;
+            update = true;
+            flag = false;
+        }
+
+        if (!flag && (bms.currentBeat != 20 || bms.currentBeat != 44 || bms.currentBeat != 68 || bms.currentBeat != 92 || bms.currentBeat != 116))
+        {
+            flag = true;
+        }
+
+        //bms.currentBeat
+
         //Color Cycle
         timerOne += Time.deltaTime;
         if (timerOne > backgrounds[bgID].TimerTickOne && backgrounds[bgID].ColorArrayOne.Length != 0)
