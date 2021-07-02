@@ -52,8 +52,18 @@ public class GameManagerScript : MonoBehaviour {
             // I was trying to use a switch case but apparently those only accept actual values, not just conditions.
             if (clickTiming >= 0.9) scoreboard.sprite = perfectSprite;
             else if (clickTiming >= 0.75) scoreboard.sprite = goodSprite;
-            else if (clickTiming >= 0.5) scoreboard.sprite = lateSprite;
-            else if (clickTiming >= 0.25) scoreboard.sprite = earlySprite;
+            else if (clickTiming >= 0.5)
+            {
+                scoreboard.sprite = lateSprite;
+
+                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>().ChangeHP(5);
+            }
+            else if (clickTiming >= 0.25)
+            {
+                scoreboard.sprite = earlySprite;
+
+                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>().ChangeHP(5);
+            }
             else if (clickTiming >= 0.1) scoreboard.sprite = goodSprite;
             else scoreboard.sprite = perfectSprite; 
             //else Debug.Log("How??!?!?! This is not supposed to happen.");
