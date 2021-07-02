@@ -145,7 +145,7 @@ public class BeatManagerScript : MonoBehaviour {
 
     public void click() {
         // beats 2-9 (1-8)
-        int cb = currentBeat % 12;
+        int cb = Mathf.RoundToInt(time * beatsPerSecond) % 12;
         if (cb <= 8 && cb != 0) beats[cb-1].GetComponent<BeatScript>().click();
     }
 
