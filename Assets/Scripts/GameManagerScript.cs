@@ -23,7 +23,7 @@ public class GameManagerScript : MonoBehaviour {
     void Update() {
         if (Input.GetKeyDown(KeyCode.Space)) click();
 
-        if (Input.GetKeyDown(KeyCode.K)) startLevel(0);
+        if (!bms.playing && Input.GetKeyDown(KeyCode.K)) startLevel(0);
 
         //Debug.Log(1 - (bms.time % (1 / bms.beatsPerSecond)));
     }
