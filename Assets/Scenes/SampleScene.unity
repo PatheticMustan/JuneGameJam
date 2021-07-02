@@ -6039,7 +6039,7 @@ GameObject:
   - component: {fileID: 470784742}
   m_Layer: 0
   m_Name: Beat Manager
-  m_TagString: Untagged
+  m_TagString: BeatManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6077,7 +6077,7 @@ MonoBehaviour:
   beatData: 
   player: {fileID: 1432751252}
   beatContainer: {fileID: 1337266088}
-  musicCounter: {fileID: 0}
+  musicCounter: {fileID: 2067632593}
   beatPrefab: {fileID: 4724835035234509358, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
     type: 3}
   levels:
