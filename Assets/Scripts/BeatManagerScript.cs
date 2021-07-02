@@ -56,6 +56,7 @@ public class BeatManagerScript : MonoBehaviour {
         if (playing) {
             time += Time.deltaTime;
             currentBeat = (int)(time * beatsPerSecond);
+            //Debug.Log((time * beatsPerSecond)-1.5);
 
             float xVal = -6.3f + (1.6f * (currentBeat % 12));
             if (currentBeat % 12 > 7) {

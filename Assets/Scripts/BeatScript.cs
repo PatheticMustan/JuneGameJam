@@ -12,6 +12,7 @@ public class BeatScript : MonoBehaviour {
 
     public int beat;
     public BeatTypes type;
+    public bool used;
 
     
 
@@ -19,6 +20,7 @@ public class BeatScript : MonoBehaviour {
     void Start() {
         //setupBeat(0, BeatTypes.Poison);
         bms = GameObject.FindGameObjectsWithTag("BeatManager")[0].GetComponent<BeatManagerScript>();
+        used = false;
     }
 
     void FixedUpdate() {
@@ -37,6 +39,18 @@ public class BeatScript : MonoBehaviour {
 
             default:
                 break;
+        }
+
+        int cb = bms.currentBeat % 12;
+
+        if (cb < 9 && cb != 0 && ((bms.time * bms.beatsPerSecond)-1.5f)%8 > beat) {
+            if (type == BeatTypes.Poison) return;
+
+            if (!used && gameObject.activeSelf) {
+                Debug.Log("missed beat #" + (beat+1) + ", type " + type + ", cb " + (bms.currentBeat));
+                used = true;
+                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>().ChangeHP(10);
+            }
         }
     }
 
@@ -78,6 +92,7 @@ public class BeatScript : MonoBehaviour {
     }
 
     public void click() {
+        used = true;
 
         //Debug.Log(type);
         if (type != BeatTypes.Rest)
