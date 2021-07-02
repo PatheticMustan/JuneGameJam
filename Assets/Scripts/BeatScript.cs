@@ -28,7 +28,7 @@ public class BeatScript : MonoBehaviour {
                 break;
 
             case BeatTypes.Ghost:
-                Debug.Log(bms.currentBeat);
+                //Debug.Log(bms.currentBeat);
                 if ((bms.currentBeat % 12) + 1 >= beat) {
                     GetComponent<SpriteRenderer>().color = new Color32(0xFF, 0xFF, 0xFF, 0xFF);
                 } else {
