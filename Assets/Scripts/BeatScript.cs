@@ -43,11 +43,12 @@ public class BeatScript : MonoBehaviour {
 
         int cb = bms.currentBeat % 12;
 
-        if (cb < 9 && cb != 0 && ((bms.time * bms.beatsPerSecond)-1.5f)%8 > beat) {
+        if (cb < 9 && cb != 0 && ((bms.time * bms.beatsPerSecond)%12)-1.5f > beat) {
             if (type == BeatTypes.Poison) return;
 
             if (!used && gameObject.activeSelf) {
-                Debug.Log("missed beat #" + (beat+1) + ", type " + type + ", cb " + (bms.currentBeat));
+                //Debug.Log("missed beat #" + (beat+1) + ", type " + type + ", cb " + (bms.currentBeat));
+                //Debug.Log((bms.time * bms.beatsPerSecond) + ": " + beat);
                 used = true;
                 GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>().ChangeHP(10);
             }
