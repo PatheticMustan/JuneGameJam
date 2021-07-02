@@ -9,8 +9,11 @@ public class BeatScript : MonoBehaviour {
     public AnimatorController ghostBeat;
     // public AnimatorController doubleBeat;
 
+    public int beat;
+    public BeatTypes type;
+
     void Start() {
-        setupBeat(0, BeatTypes.Poison);
+        //setupBeat(0, BeatTypes.Poison);
     }
 
     void Update() {
@@ -18,8 +21,12 @@ public class BeatScript : MonoBehaviour {
     }
 
     public void setupBeat(int beat, BeatTypes type) {
+        this.beat = beat;
+        this.type = type;
+
         gameObject.SetActive(true);
 
+        // setup animator
         switch (type) {
             case BeatTypes.Rest:
                 gameObject.SetActive(false);
@@ -46,5 +53,8 @@ public class BeatScript : MonoBehaviour {
                 Debug.Log("This beat hasn't been implemented yet!");
                 break;
         }
+
+        // move beat to position
+        transform.position = new Vector3(-5.5f + (1.6f * (beat % 8)), 0 ,0);
     }
 }

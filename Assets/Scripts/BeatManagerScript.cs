@@ -19,6 +19,7 @@ public class BeatManagerScript : MonoBehaviour {
     public GameObject beatPrefab;
 
     private int lastUpdatedBeat;
+    private GameObject[] beats;
 
     /** Beat Notes
      * x - empty space
@@ -35,7 +36,7 @@ public class BeatManagerScript : MonoBehaviour {
     };
 
     void Start() {
-        
+        beats = new GameObject[8];
     }
 
     void FixedUpdate() {
@@ -57,22 +58,62 @@ public class BeatManagerScript : MonoBehaviour {
             );*/
 
             float xVal = -6.3f + (1.6f * (currentBeat % 12));
+            if (currentBeat % 12 > 7) {
+                if (currentBeat % 12 > 9) xVal = -6.3f;
+                else xVal = 6.3f;
+            }
+            player.transform.position = new Vector3(xVal, 0, 0);
 
-            if (currentBeat % 12 > 7)
-            {
-                if (currentBeat % 12 > 9)
-                    xVal = -6.3f;
-                else
-                    xVal = 6.3f;
+            // on the first beat of the song, or the 10th beat of every 12 beats.
+            if (currentBeat == 0 || currentBeat % 12 == 9) {
+                if (lastUpdatedBeat != currentBeat) {
+                    lastUpdatedBeat = currentBeat;
+
+                    
+
+                    for (int i = 0; i < 8; i++) {
+                        if (currentBeat != 0) {
+                            Destroy(beats[i]);
+                        }
+                        beats[i] = Instantiate(beatPrefab);
+
+                        // no, you can't just replace the last part with (currentBeat/3).
+                        // each song line has 8 beats, but each line has a 4 beat buffer afterwards. Current beat is %12, but we need the real beat index,
+                        // so we do some wizard stuff to get it. I swear we've thought it out, we're not just hackjobs!
+                        int cbi = currentBeat + i;
+                        int realBeatIndex = cbi - (4 * (cbi / 12));
+                        BeatTypes currentBeatType;
+
+                        
+
+                        if (realBeatIndex >= beatData.Length) currentBeatType = BeatTypes.Rest;
+                        else currentBeatType = beatData[realBeatIndex];
+
+                        //Debug.Log(currentBeatType + ", " + realBeatIndex);
+
+                        beats[i].GetComponent<BeatScript>().setupBeat(i, currentBeatType);
+                        beats[i].transform.parent = beatContainer.transform;
+                    }
+                }
             }
 
-
-            player.transform.position = new Vector3(xVal, 0, 0);
+            // last beat, past the rest
+            if (currentBeat % 12 == 11) {
+                int realBeatIndex = currentBeat - (4 * (currentBeat / 12));
+                if (realBeatIndex >= beatData.Length) {
+                    playing = false;
+                    // end the game
+                    for (int i = 0; i < 8; i++) {
+                        Destroy(beats[i]);
+                    }
+                }
+            }
         }
     }
 
     public void startLevel(int level, int beat) {
         beat = 0;
+        lastUpdatedBeat = -1;
         GetComponent<AudioSource>().clip = levels[level].audio;
         GetComponent<AudioSource>().Play();
 
