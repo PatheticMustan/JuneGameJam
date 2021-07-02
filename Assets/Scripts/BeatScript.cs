@@ -87,6 +87,7 @@ public class BeatScript : MonoBehaviour {
             case BeatTypes.Poison:
                 gameObject.SetActive(false);
                 Debug.Log("Ow! Poison!");
+                GameObject.FindGameObjectsWithTag("Player")[0].GetComponent<Player>().ChangeHP(30);
                 break;
 
             case BeatTypes.Double:
