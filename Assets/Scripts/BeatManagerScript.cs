@@ -52,7 +52,37 @@ public class BeatManagerScript : MonoBehaviour {
             }
             player.transform.position = new Vector3(xVal, 0, 0);
 
-            musicCounter.transform.position = player.transform.position + new Vector3(-0.8f, 0, 0);
+
+
+
+
+
+
+            //musicCounter.transform.position = player.transform.position + new Vector3(-0.8f, 0, 0);
+
+            Vector3 start = new Vector3(-6.3f, 0, 0);
+            Vector3 end = new Vector3(6.3f, 0, 0);
+            float speed = 1.59f; // 1.59 is the length of one beat cell, reset every 8 beats
+
+            if (Equals(player.transform.position, end)) {
+                musicCounter.transform.position = start;
+            }
+
+            if (currentBeat % 12 <= 7 && currentBeat != 0) {
+                musicCounter.transform.position = Vector3.MoveTowards(
+                    musicCounter.transform.position,
+                    end,
+                    speed * Time.deltaTime * beatsPerSecond
+                );
+            }
+
+
+
+
+
+
+
+
 
             // on the first beat of the song, or the 10th beat of every 12 beats.
             if (currentBeat == 0 || currentBeat % 12 == 9) {
@@ -68,13 +98,13 @@ public class BeatManagerScript : MonoBehaviour {
                         }
                         beats[i] = Instantiate(beatPrefab);
 
-                        
+
                         int realBeatIndex = (line * 8) + i;
                         BeatTypes currentBeatType;
 
                         Debug.Log(realBeatIndex);
 
-                        
+
 
                         if (realBeatIndex >= beatData.Length) currentBeatType = BeatTypes.Rest;
                         else currentBeatType = beatData[realBeatIndex];
