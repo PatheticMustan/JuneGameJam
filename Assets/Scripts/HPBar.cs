@@ -4,20 +4,50 @@ using UnityEngine;
 
 public class HPBar : MonoBehaviour
 {
-    public RectTransform hpBarObject;
+    public int maxHP;
+    public float speed;
+
+    private float _width;
+    private float _change;
+    private int _HP;
+    private Vector3 _target;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        _width = GetComponent<RectTransform>().rect.width;
+        _change = _width / maxHP;
+        _HP = maxHP;
+        _target = transform.localPosition;
     }
 
-    // x = 0 maxHP
-    // x = -4 0 HP
-    public void UpdateHPBar (int currentHP, int maxHP)
+    // Update is called once per frame
+    void Update()
     {
-        float percent = (maxHP - currentHP) / maxHP;
+        if (_target != transform.localPosition)
+        {
+            transform.localPosition = Vector3.Lerp(transform.localPosition, _target, speed * Time.deltaTime);
+        }
+    }
 
-        //hpBarObject
+    public void ChangeHP(int hp)
+    {
+        _HP -= hp;
+        Vector3 nextSpot = _target;
+        float change = _change * hp;
+        nextSpot.x -= change;
+
+        if (_HP <= 0)
+        {
+            nextSpot.x = -_width * 10;
+            _HP = 0;
+        }
+        else if (_HP > maxHP)
+        {
+            nextSpot.x = 0;
+            _HP = maxHP;
+        }
+
+        _target = nextSpot;
     }
 }

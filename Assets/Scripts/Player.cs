@@ -21,9 +21,10 @@ public class Player : MonoBehaviour {
     public bool ChangeHP(int damage) {
         hp -= damage;
 
-        hpBar.UpdateHPBar(hp, maxHP);
+        hpBar.ChangeHP(damage);
 
         if (hp <= 0) {
+            
             return false;
         }
 
