@@ -22,11 +22,10 @@ public class BeatScript : MonoBehaviour {
     void FixedUpdate() {
         switch (type) {
             case BeatTypes.Poison:
-                gameObject.SetActive(false);
-                Debug.Log("Ow! Poison!");
                 break;
 
             case BeatTypes.Ghost:
+                bms.currentBeat
                 gameObject.SetActive(false);
                 break;
 
@@ -38,8 +37,6 @@ public class BeatScript : MonoBehaviour {
     public void setupBeat(int beat, BeatTypes type) {
         this.beat = beat;
         this.type = type;
-
-        gameObject.SetActive(true);
 
         // setup animator
         switch (type) {
@@ -61,6 +58,7 @@ public class BeatScript : MonoBehaviour {
 
             case BeatTypes.Ghost:
                 GetComponent<Animator>().runtimeAnimatorController = ghostBeat;
+                //GetComponent<SpriteRenderer>().color = new Color(1f, 1f, 1f, 0.5f);
                 break;
 
             default:
