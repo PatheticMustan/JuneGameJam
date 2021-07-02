@@ -9,15 +9,30 @@ public class BeatScript : MonoBehaviour {
     public AnimatorController ghostBeat;
     // public AnimatorController doubleBeat;
 
+    public BeatManagerScript bms;
+
     public int beat;
     public BeatTypes type;
 
     void Start() {
         //setupBeat(0, BeatTypes.Poison);
+        bms = GameObject.FindGameObjectsWithTag("BeatManager")[0].GetComponent<BeatManagerScript>();
     }
 
-    void Update() {
+    void FixedUpdate() {
+        switch (type) {
+            case BeatTypes.Poison:
+                gameObject.SetActive(false);
+                Debug.Log("Ow! Poison!");
+                break;
 
+            case BeatTypes.Ghost:
+                gameObject.SetActive(false);
+                break;
+
+            default:
+                break;
+        }
     }
 
     public void setupBeat(int beat, BeatTypes type) {
@@ -56,5 +71,34 @@ public class BeatScript : MonoBehaviour {
 
         // move beat to position
         transform.position = new Vector3(-5.5f + (1.6f * (beat % 8)), 0 ,0);
+    }
+
+    public void click() {
+        switch (type) {
+            case BeatTypes.Rest:
+                break;
+
+            case BeatTypes.Normal:
+                gameObject.SetActive(false);
+                return;
+                break;
+
+            case BeatTypes.Poison:
+                gameObject.SetActive(false);
+                Debug.Log("Ow! Poison!");
+                break;
+
+            case BeatTypes.Double:
+                // GetComponent<Animator>().runtimeAnimatorController = doubleBeat;
+                break;
+
+            case BeatTypes.Ghost:
+                gameObject.SetActive(false);
+                break;
+
+            default:
+                Debug.Log("This beat hasn't been implemented yet!");
+                break;
+        }
     }
 }
