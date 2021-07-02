@@ -27,6 +27,13 @@ public class BeatManagerScript : MonoBehaviour {
     public ParticleSystem poisonBeatPS;
     public ParticleSystem ghostBeatPS;
 
+
+    public GameObject sfxObj;
+    public AudioClip hitNormalBeat;
+    public AudioClip hitPoisonBeat;
+    public AudioClip hitGhostBeat;
+
+
     /** Beat Notes
      * x - empty space
      * b - normal beats
@@ -196,11 +203,15 @@ public class BeatManagerScript : MonoBehaviour {
             case BeatTypes.Normal:
                 normalBeatPS.transform.position = pos;
                 normalBeatPS.Play();
+
+                sfxObj.GetComponent<AudioSource>().clip = hitNormalBeat;
                 break;
 
             case BeatTypes.Poison:
                 poisonBeatPS.transform.position = pos;
                 poisonBeatPS.Play();
+
+                sfxObj.GetComponent<AudioSource>().clip = hitPoisonBeat;
                 break;
 
             case BeatTypes.Double:
@@ -210,12 +221,16 @@ public class BeatManagerScript : MonoBehaviour {
             case BeatTypes.Ghost:
                 ghostBeatPS.transform.position = pos;
                 ghostBeatPS.Play();
+
+                sfxObj.GetComponent<AudioSource>().clip = hitGhostBeat;
                 break;
 
             default:
                 Debug.Log("This beat hasn't been implemented yet!");
                 break;
         }
+
+        sfxObj.GetComponent<AudioSource>().Play();
     }
 
 }
