@@ -18,6 +18,6 @@ public class HPBar : MonoBehaviour
     {
         float percent = (maxHP - currentHP) / maxHP;
 
-        hpBarObject
+        //hpBarObject
     }
 }
