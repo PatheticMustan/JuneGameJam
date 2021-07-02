@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class HPBar : MonoBehaviour
 {
-
+    public RectTransform hpBarObject;
 
     // Start is called before the first frame update
     void Start()
@@ -12,14 +12,12 @@ public class HPBar : MonoBehaviour
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    // x = 0 maxHP
+    // x = -4 0 HP
     public void UpdateHPBar (int currentHP, int maxHP)
     {
+        float percent = (maxHP - currentHP) / maxHP;
 
+        hpBarObject
     }
 }
