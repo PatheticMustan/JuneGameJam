@@ -6088,7 +6088,7 @@ MonoBehaviour:
   levels:
   - songName: Test Song
     bpm: 144
-    beatData: gggggggg xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
+    beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
       xbgbxgpg xgxgpgxg xbbbbbbb
     audio: {fileID: 8300000, guid: f7c0c5324b10a0240909082bd5a317fd, type: 3}
 --- !u!82 &470784742
@@ -45483,6 +45483,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1337266089}
     m_Modifications:
+    - target: {fileID: 4724835035234509356, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
+        type: 3}
+      propertyPath: bms
+      value: 
+      objectReference: {fileID: 470784741}
     - target: {fileID: 4724835035234509358, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
         type: 3}
       propertyPath: m_Name
@@ -45548,5 +45553,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5247914891047350680, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 1bb1baa5dca61384980211a8872b8430, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c42adf6e571ab3b4fa2a0b5fe6070cb5, type: 3}

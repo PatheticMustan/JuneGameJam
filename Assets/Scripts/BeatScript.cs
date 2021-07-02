@@ -25,10 +25,9 @@ public class BeatScript : MonoBehaviour {
                 break;
 
             case BeatTypes.Ghost:
-                if (bms.currentBeat + 2 >= beat) {
+                if (bms.currentBeat + 1 >= beat) {
                     GetComponent<SpriteRenderer>().color = new Color32(0xFF, 0xFF, 0xFF, 0xFF);
                 }
-                gameObject.SetActive(false);
                 break;
 
             default:
@@ -60,7 +59,7 @@ public class BeatScript : MonoBehaviour {
 
             case BeatTypes.Ghost:
                 GetComponent<Animator>().runtimeAnimatorController = ghostBeat;
-                GetComponent<SpriteRenderer>().color = new Color32(0xFF, 0xFF, 0xFF, 0x80);
+                GetComponent<SpriteRenderer>().color = new Color32(0xFF, 0xFF, 0xFF, 0x30);
                 break;
 
             default:
