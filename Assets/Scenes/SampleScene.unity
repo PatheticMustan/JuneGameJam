@@ -6088,7 +6088,7 @@ MonoBehaviour:
   levels:
   - songName: Test Song
     bpm: 144
-    beatData: xxxbxxxb xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
+    beatData: gggggggg xxxbxbxb xbxbxbxb xxxpxbxb xpxbxbxp xxxbxbxg xpxgxbxg xbxbxbbg
       xbgbxgpg xgxgpgxg xbbbbbbb
     audio: {fileID: 8300000, guid: f7c0c5324b10a0240909082bd5a317fd, type: 3}
 --- !u!82 &470784742

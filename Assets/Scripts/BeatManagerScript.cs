@@ -102,7 +102,7 @@ public class BeatManagerScript : MonoBehaviour {
                         int realBeatIndex = (line * 8) + i;
                         BeatTypes currentBeatType;
 
-                        Debug.Log(realBeatIndex);
+                        //Debug.Log(realBeatIndex);
 
 
 
